@@ -1,0 +1,89 @@
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #000;
+  --btn-color: #fff;
+  --btn-hover: #e0e0e0;
+  --accent: #4CAF50;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #fff;
+  --btn-color: #2c2c2c;
+  --btn-hover: #3a3a3a;
+  --accent: #00e676;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  ;
+  padding: 20px;
+  background: var(--btn-color);
+  position: relative;
+}
+
+.themetoggle {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+#display {
+  width: 88%;
+  font-size: 28px;
+  padding: 22px;
+  margin-bottom: 17px;
+  border: none;
+  border-radius: 20px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  text-align: right;
+  outline: none;
+}
+.symbols{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+}
+button{
+  font-size: 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 18px;
+  background-color: var(--btn-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background 0.3s ;
+
+}
+button:hover{
+  background-color: var(--btn-hover);
+}
+button.zero{
+  grid-column: span 2;
+  text-align: left;
+  padding-left: 25px;
+}
+button:nth-child(4n){
+  background-color: var(--accent);
+  color: #fff;
+}
+button:nth-child(4n):hover{
+  opacity: 0.6;
+}
